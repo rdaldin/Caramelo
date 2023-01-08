@@ -13,7 +13,7 @@ body {
   font-family: "Roboto Condensed", sans-serif;
 }
 
-div {
+.principal {
   display: grid;
   grid-template-rows: repeat(5, 20%);
   grid-template-columns: 50% auto;
@@ -37,7 +37,11 @@ div {
 p {
   color: #2d1d04;
   font-weight: 400;
-  display: none;
+  font-size: 2.6rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  line-height: 3.9rem;
+  text-align: center;
 }
 
 #old {
@@ -53,6 +57,19 @@ p {
   width: 100%;
   grid-row: 3 / 5;
   grid-column: 2;
+}
+
+.rifa {
+  display: grid;
+  grid-template-columns: 50% auto;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 80px auto;
+}
+
+#premio {
+  margin: 0;
+  width: 100%;
 }
 
 @media (max-width: 1200px) {
