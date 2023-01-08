@@ -38,8 +38,8 @@ p {
   color: #2d1d04;
   font-weight: 400;
   font-size: 2.6rem;
-  max-width: 1100px;
-  margin: 0 auto;
+  max-width: 1200px;
+  margin: 0px auto;
   line-height: 3.9rem;
   text-align: center;
 }
@@ -70,6 +70,21 @@ p {
 #premio {
   margin: 0;
   width: 100%;
+}
+.rifa p {
+  text-align: start;
+  margin-left: 50px;
+}
+ul {
+  padding: 0%;
+  list-style: inside square;
+  color: #2d1d04;
+  font-weight: 400;
+  font-size: 2.6rem;
+  max-width: 1200px;
+  margin-left: 50px;
+  line-height: 3.9rem;
+  text-align: start;
 }
 
 @media (max-width: 1200px) {
