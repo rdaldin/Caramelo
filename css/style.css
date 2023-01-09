@@ -15,7 +15,7 @@ body {
 
 .principal {
   display: grid;
-  grid-template-rows: repeat(5, 20%);
+  grid-template-rows: repeat(5, calc(calc(max-width/2) * 0.25));
   grid-template-columns: 50% auto;
   justify-content: center;
   max-width: 1200px;
@@ -24,8 +24,8 @@ body {
 
 .titulo {
   grid-column: 2;
-  grid-row: 1 / 2;
-  margin: 40px 0;
+  grid-row: 1 / 3;
+  margin: 20px 0;
   color: #2d1d04;
   text-transform: uppercase;
   font-weight: 700;
@@ -34,28 +34,34 @@ body {
   text-align: center;
 }
 
-p {
+h2 {
   color: #2d1d04;
   font-weight: 400;
-  font-size: 2.6rem;
+  font-size: 2.5rem;
   max-width: 1200px;
-  margin: 0px auto;
-  line-height: 3.9rem;
-  text-align: center;
+  margin: auto auto;
+  line-height: 3.75rem;
+  text-align: start;
+  grid-row: 4 / 6;
+  grid-column: 1;
+}
+
+.paragrafo {
+  margin: auto auto;
 }
 
 #old {
   margin: 0;
   width: 100%;
 
-  grid-row: 1 / 3;
+  grid-row: 1 / 4;
   grid-column: 1;
 }
 
 #atual {
   margin: 0;
   width: 100%;
-  grid-row: 3 / 5;
+  grid-row: 3 / 6;
   grid-column: 2;
 }
 
@@ -74,6 +80,11 @@ p {
 .rifa p {
   text-align: start;
   margin-left: 50px;
+  color: #2d1d04;
+  font-weight: 400;
+  font-size: 2.5rem;
+  line-height: 3.75rem;
+  text-align: start;
 }
 ul {
   padding: 0%;
@@ -97,7 +108,11 @@ ul {
     margin: 40px auto;
     font-size: 5.5rem;
   }
+  h2 {
+    font-size: 2.1rem;
 
+    line-height: 3.05rem;
+  }
   #old {
     width: 100%;
   }
@@ -110,38 +125,48 @@ ul {
 
 @media (max-width: 1000px) {
   div {
-    display: flex;
-    flex-wrap: wrap;
-    /* grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, auto); */
-    /* max-width: auto; */
+    max-width: 100%;
+    grid-template-columns: 1fr;
+
+    gap: 20px;
   }
 
   #old {
     max-width: 50%;
+    max-height: 50%;
     margin: 0 auto;
+    grid-column: 1;
   }
 
   #atual {
     max-width: 50%;
 
     margin: 0 auto;
+    grid-row: 3;
+    grid-column: 1;
   }
   .titulo {
-    margin: 0px auto;
-    font-size: 5.5rem;
+    max-width: 50%;
+    margin: auto;
+    font-size: 2.5rem;
 
-    padding: 20px 0;
+    padding: 0;
+    grid-row: 2;
+    grid-column: 1;
+  }
+  h2 {
+    max-width: 50%;
+    font-size: 1rem;
+    grid-row: 4;
+    line-height: 2.5rem;
   }
 }
 
 @media (max-width: 800px) {
   div {
-    display: flex;
-    flex-wrap: wrap;
-    /* grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, auto); */
-    /* max-width: auto; */
+    max-width: auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
   }
 
   #old {
