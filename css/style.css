@@ -15,7 +15,7 @@ body {
 
 .principal {
   display: grid;
-  grid-template-rows: repeat(5, calc(calc(max-width/2) * 0.25));
+  /* grid-template-rows: repeat(5, calc(calc(max-width/2) * 0.25)); */
   grid-template-columns: 50% auto;
   justify-content: center;
   max-width: 1200px;
@@ -46,7 +46,10 @@ h2 {
   grid-column: 1;
 }
 
-.paragrafo {
+.paragrafo2 span {
+  display: none;
+}
+.paragrafo1 {
   margin: auto auto;
 }
 
@@ -99,8 +102,9 @@ ul {
 }
 
 @media (max-width: 1200px) {
-  div {
-    max-width: auto;
+  .principal,
+  .paragrafo2 {
+    max-width: 95%;
   }
 
   .titulo {
@@ -124,18 +128,29 @@ ul {
 }
 
 @media (max-width: 1000px) {
-  div {
-    max-width: 100%;
+  .principal {
     grid-template-columns: 1fr;
 
     gap: 20px;
   }
+  .paragrafo1 {
+    display: none;
+  }
 
+  .paragrafo2 span {
+    display: initial;
+  }
+
+  .paragrafo2 {
+    padding-top: 20px;
+    max-width: 65%;
+  }
   #old {
     max-width: 50%;
-    max-height: 50%;
+    /* max-height: 50%; */
     margin: 0 auto;
     grid-column: 1;
+    grid-row: 2;
   }
 
   #atual {
@@ -146,12 +161,11 @@ ul {
     grid-column: 1;
   }
   .titulo {
-    max-width: 50%;
+    max-width: 65%;
     margin: auto;
-    font-size: 2.5rem;
-
-    padding: 0;
-    grid-row: 2;
+    font-size: 3.5rem;
+    padding: 20px 0 0 0;
+    grid-row: 1;
     grid-column: 1;
   }
   h2 {
@@ -163,12 +177,9 @@ ul {
 }
 
 @media (max-width: 800px) {
-  div {
-    max-width: auto;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+  .principal {
+    gap: 0;
   }
-
   #old {
     max-width: 50%;
     margin: 0 auto;
@@ -180,9 +191,9 @@ ul {
     margin: 0 auto;
   }
   .titulo {
-    max-width: 100%;
+    max-width: 50%;
     margin: 0px auto;
-    font-size: 4.5rem;
+    font-size: 3rem;
 
     padding: 20px 0;
   }
